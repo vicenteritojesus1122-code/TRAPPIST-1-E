@@ -1,0 +1,265 @@
+
+/* Configuracion general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f4f4f4;
+    background: #080d20 url("fondo_espacio.gif") center/cover fixed;
+}
+
+/* Encabezado y menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 25px;
+    background: rgba(15, 45, 134, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: 2px;
+    animation: entrada 1.2s ease;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: rgb(206, 196, 196);
+    text-decoration: none;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #948c86;
+    border-bottom-color: #bf9876;
+}
+
+/* Animacion de entrada */
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenido principal */
+main {
+    width: 90%;
+    max-width: 1050px;
+    min-height: 70vh;
+    margin: 35px auto;
+    animation: entrada 1s ease;
+}
+
+h2 {
+    color: #d1a986;
+}
+
+.titulo,
+.introduccion {
+    text-align: center;
+}
+
+/* Bienvenida y secciones */
+.bienvenida,
+.seccion,
+.tarjeta,
+.caja-contacto {
+    padding: 22px;
+    margin-bottom: 20px;
+    background: rgba(1, 13, 44, 0.88);
+    border: 1px solid rgba(121, 121, 204, 0.35);
+    border-radius: 10px;
+}
+
+.bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    margin: 55px auto;
+    padding: 35px;
+}
+
+.texto-inicio {
+    flex: 1;
+}
+
+.bienvenida img {
+    width: 40%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 12px;
+    color: white;
+    background: #2e3239;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #004db8;
+}
+
+/* Tarjetas de planetas y datos */
+.planetas,
+.datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.tarjeta h3 {
+    color: #d5b79d;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    margin: 12px auto;
+    border-radius: 7px;
+}
+
+/* Marquesinas */
+marquee {
+    display: block;
+    padding: 10px;
+    margin: 12px 0;
+    color: #e5e7ed;
+    background: rgba(59, 6, 0, 0.8);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+/* Tabla avanzada */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(28, 65, 149, 0.95);
+    text-align: center;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #6c7c96;
+}
+
+th {
+    color: #f0d2b6;
+    background: #82aae1;
+}
+
+tr:nth-child(even) {
+    background: rgba(90, 110, 140, 0.25);
+}
+
+/* Formulario */
+.caja-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 6px;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    color: #161515;
+    background: #f2f2f2;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+/* Enlaces informativos */
+.fuente a {
+    color: #ece8e1b3;
+}
+
+/* Pie de pagina */
+footer {
+    padding: 12px 0;
+    overflow: hidden;
+    background: rgba(5, 10, 25, 0.95);
+    border-top: 10px solid rgba(162, 3, 3, 0.571);
+}
+
+/* Adaptacion a celulares */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .bienvenida {
+        flex-direction: column;
+        margin: 30px auto;
+        padding: 25px 18px;
+    }
+
+    .bienvenida img {
+        width: 100%;
+    }
+
+    .caja-contacto {
+        grid-template-columns: 1fr;
+    }
+}
+

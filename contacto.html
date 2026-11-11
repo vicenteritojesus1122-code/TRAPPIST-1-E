@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAPPIST-1 | Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">TRAPPIST-1</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="contenido.html">Exoplanetas</a>
+        <a href="informacion.html">Información adicional</a>
+        <a class="activo" href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <section class="caja-contacto">
+        <div>
+            <h2>Contacto</h2>
+            <p>Escribe una pregunta o comentario sobre el sistema TRAPPIST-1.</p>
+        </div>
+
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button class="boton" type="button" onclick="alert('Formulario de demostración. No se guardaron datos.')">
+                Enviar mensaje
+            </button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <marquee scrollamount="4">TRAPPIST-1 · SIETE PLANETAS · UN SISTEMA POR DESCUBRIR ·</marquee>
+    <marquee direction="right" scrollamount="2">EXPLORANDO NUEVOS MUNDOS · PROYECTO MÓDULO IV ·</marquee>
+</footer>
+
+</body>
+</html>
+
